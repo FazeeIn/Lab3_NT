@@ -32,13 +32,16 @@
             button2 = new Button();
             label1 = new Label();
             textBox1 = new TextBox();
+            label2 = new Label();
+            textBox2 = new TextBox();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(43, 160);
+            button1.Location = new Point(30, 96);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(125, 40);
+            button1.Size = new Size(88, 24);
             button1.TabIndex = 0;
             button1.Text = "Продолжить";
             button1.UseVisualStyleBackColor = true;
@@ -46,41 +49,69 @@
             // 
             // button2
             // 
-            button2.Location = new Point(181, 160);
+            button2.Location = new Point(127, 96);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(125, 40);
+            button2.Size = new Size(88, 24);
             button2.TabIndex = 1;
             button2.Text = "Отмена";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(43, 89);
+            label1.Location = new Point(44, 28);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(58, 25);
+            label1.Size = new Size(38, 15);
             label1.TabIndex = 2;
             label1.Text = "Порт:";
+            label1.Click += label1_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(123, 86);
+            textBox1.Location = new Point(95, 25);
+            textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(150, 31);
+            textBox1.Size = new Size(106, 23);
             textBox1.TabIndex = 3;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(44, 63);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(32, 15);
+            label2.TabIndex = 4;
+            label2.Text = "Ник:";
+            label2.Click += label2_Click;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(95, 60);
+            textBox2.Margin = new Padding(2);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(106, 23);
+            textBox2.TabIndex = 5;
+            // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(329, 222);
+            ClientSize = new Size(230, 133);
+            Controls.Add(textBox2);
+            Controls.Add(label2);
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
+            Margin = new Padding(2);
             Name = "Form2";
             Text = "Form2";
+            Load += Form2_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -91,5 +122,7 @@
         private Button button2;
         private Label label1;
         private TextBox textBox1;
+        private Label label2;
+        private TextBox textBox2;
     }
 }

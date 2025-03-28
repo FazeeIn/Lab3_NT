@@ -26,6 +26,7 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
+        [Obsolete]
         private void InitializeComponent()
         {
             menuStrip1 = new MenuStrip();
@@ -43,14 +44,15 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { выходToolStripMenuItem, серверToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 33);
+            menuStrip1.Padding = new Padding(4, 1, 0, 1);
+            menuStrip1.Size = new Size(560, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // выходToolStripMenuItem
             // 
             выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            выходToolStripMenuItem.Size = new Size(80, 29);
+            выходToolStripMenuItem.Size = new Size(54, 22);
             выходToolStripMenuItem.Text = "Выход";
             выходToolStripMenuItem.Click += выходToolStripMenuItem_Click;
             // 
@@ -58,43 +60,46 @@
             // 
             серверToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { запуститьToolStripMenuItem, остановитьToolStripMenuItem });
             серверToolStripMenuItem.Name = "серверToolStripMenuItem";
-            серверToolStripMenuItem.Size = new Size(89, 29);
+            серверToolStripMenuItem.Size = new Size(59, 22);
             серверToolStripMenuItem.Text = "Сервер";
             серверToolStripMenuItem.Click += серверToolStripMenuItem_Click;
             // 
             // запуститьToolStripMenuItem
             // 
             запуститьToolStripMenuItem.Name = "запуститьToolStripMenuItem";
-            запуститьToolStripMenuItem.Size = new Size(209, 34);
+            запуститьToolStripMenuItem.Size = new Size(138, 22);
             запуститьToolStripMenuItem.Text = "Запустить";
             запуститьToolStripMenuItem.Click += запуститьToolStripMenuItem_Click;
             // 
             // остановитьToolStripMenuItem
             // 
             остановитьToolStripMenuItem.Name = "остановитьToolStripMenuItem";
-            остановитьToolStripMenuItem.Size = new Size(209, 34);
+            остановитьToolStripMenuItem.Size = new Size(138, 22);
             остановитьToolStripMenuItem.Text = "Остановить";
             // 
             // textBox1
             // 
             textBox1.HideSelection = false;
-            textBox1.Location = new Point(0, 36);
+            textBox1.Location = new Point(0, 22);
+            textBox1.Margin = new Padding(2, 2, 2, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(150, 31);
+            textBox1.Size = new Size(106, 23);
             textBox1.TabIndex = 0;
             textBox1.TabStop = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(560, 270);
             Controls.Add(textBox1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            KeyDown += Form1_KeyDown;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

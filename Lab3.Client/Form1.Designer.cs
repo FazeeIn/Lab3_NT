@@ -45,7 +45,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { выходToolStripMenuItem, соединениеToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 33);
+            menuStrip1.Padding = new Padding(4, 1, 0, 1);
+            menuStrip1.Size = new Size(560, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
@@ -53,7 +54,7 @@
             // выходToolStripMenuItem
             // 
             выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            выходToolStripMenuItem.Size = new Size(80, 29);
+            выходToolStripMenuItem.Size = new Size(54, 22);
             выходToolStripMenuItem.Text = "Выход";
             выходToolStripMenuItem.Click += выходToolStripMenuItem_Click;
             // 
@@ -61,43 +62,49 @@
             // 
             соединениеToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { подключитьсяToolStripMenuItem, отключитьсяToolStripMenuItem });
             соединениеToolStripMenuItem.Name = "соединениеToolStripMenuItem";
-            соединениеToolStripMenuItem.Size = new Size(127, 29);
+            соединениеToolStripMenuItem.Size = new Size(86, 22);
             соединениеToolStripMenuItem.Text = "Соединение";
             // 
             // подключитьсяToolStripMenuItem
             // 
             подключитьсяToolStripMenuItem.Name = "подключитьсяToolStripMenuItem";
-            подключитьсяToolStripMenuItem.Size = new Size(234, 34);
+            подключитьсяToolStripMenuItem.Size = new Size(156, 22);
             подключитьсяToolStripMenuItem.Text = "Подключиться";
             подключитьсяToolStripMenuItem.Click += подключитьсяToolStripMenuItem_Click;
             // 
             // отключитьсяToolStripMenuItem
             // 
             отключитьсяToolStripMenuItem.Name = "отключитьсяToolStripMenuItem";
-            отключитьсяToolStripMenuItem.Size = new Size(234, 34);
+            отключитьсяToolStripMenuItem.Size = new Size(156, 22);
             отключитьсяToolStripMenuItem.Text = "Отключиться";
+            отключитьсяToolStripMenuItem.Click += отключитьсяToolStripMenuItem_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(0, 36);
+            textBox1.Location = new Point(0, 22);
+            textBox1.Margin = new Padding(2);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(788, 362);
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(553, 219);
             textBox1.TabIndex = 1;
             textBox1.TabStop = false;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(0, 404);
+            textBox2.Location = new Point(0, 242);
+            textBox2.Margin = new Padding(2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(670, 31);
+            textBox2.Size = new Size(470, 23);
             textBox2.TabIndex = 1;
+            textBox2.KeyDown += textBox2_KeyDown;
             // 
             // button1
             // 
-            button1.Location = new Point(676, 404);
+            button1.Location = new Point(473, 242);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(112, 31);
+            button1.Size = new Size(78, 23);
             button1.TabIndex = 2;
             button1.Text = "Отправить";
             button1.UseVisualStyleBackColor = true;
@@ -105,17 +112,19 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(560, 270);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(2);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            KeyDown += Form1_KeyDown;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
