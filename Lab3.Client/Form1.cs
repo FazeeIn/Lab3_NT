@@ -114,11 +114,6 @@ namespace Lab3.Client
             textBox1.ScrollBars = ScrollBars.Vertical;
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private async void button1_Click(object sender, EventArgs e)
         {
             await SendMessage();
@@ -188,10 +183,6 @@ namespace Lab3.Client
             }
 
             AddTextToLog("Вы отключились от сервера");
-        }
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            
         }
 
         private async void textBox2_KeyDown(object sender, KeyEventArgs e)

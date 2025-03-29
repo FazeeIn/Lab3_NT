@@ -49,7 +49,6 @@
             menuStrip1.Size = new Size(560, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
-            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // выходToolStripMenuItem
             // 
@@ -124,7 +123,6 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
-            KeyDown += Form1_KeyDown;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

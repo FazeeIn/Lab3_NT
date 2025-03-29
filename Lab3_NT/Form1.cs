@@ -25,11 +25,6 @@ namespace Lab3_NT
             Close();
         }
 
-        private void ñåğâåğToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         [Obsolete]
         private void çàïóñòèòüToolStripMenuItem_Click(object sender, EventArgs e)
         {

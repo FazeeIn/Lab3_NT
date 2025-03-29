@@ -62,7 +62,6 @@
             серверToolStripMenuItem.Name = "серверToolStripMenuItem";
             серверToolStripMenuItem.Size = new Size(59, 22);
             серверToolStripMenuItem.Text = "Сервер";
-            серверToolStripMenuItem.Click += серверToolStripMenuItem_Click;
             // 
             // запуститьToolStripMenuItem
             // 
